@@ -1,4 +1,4 @@
-name: Made By HamzaxMohabxAbdallah
+name: Made By Hamza
 
 on: workflow_dispatch
 
@@ -12,9 +12,9 @@ jobs:
     - name:  Download The Spac >:).
       run: |
         Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
-        Invoke-WebRequest https://github.com/hamzah14/hamzacode/raw/main/start.bat?token=AMEY277EOWYV4IXRAUI7ZBDAXPV7I -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/hamzah14/hamzacode/main/wallpaper.jpg?token=AMEY2776QN3PVLXCWOWENQLAXPWBW -OutFile wallpaper.bmp
-        Invoke-WebRequest https://raw.githubusercontent.com/hamzah14/hamzacode/main/wallpaper.bat?token=AMEY2762VJYIDID5PZ5IUILAXPWAW -OutFile wallpaper.bat
+        Invoke-WebRequest https://github.com/hamzah14/hamzacode/raw/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/hamzah14/hamzacode/main/wallpaper.jpg -OutFile wallpaper.bmp
+        Invoke-WebRequest https://raw.githubusercontent.com/hamzah14/hamzacode/main/wallpaper.bat -OutFile wallpaper.bat
     - name: extract Ngrok File ya mtnake.
       run: Expand-Archive ngrok.zip
     - name: Connect To Ngrok ya ksmk.
@@ -28,11 +28,11 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
         copy wallpaper.bmp C:\wallpaper.bmp
         copy wallpaper.bat C:\wallpaper.bat
-    - name: Start Ngrok By HamzaxMohabxAbdallah :).
+    - name: Start Ngrok By Hamza :).
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
-    - name: Connect To RDP Sys CPU 2 Core - 7GB Ram - 255 SSD By HamzaxMohabxAbdallah.
+    - name: Connect To RDP Sys CPU 2 Core - 7GB Ram - 255 SSD By Hamza.
       run: cmd /c start.bat
     - name: RDP Started :).
       run: | 
-        Invoke-WebRequest https://github.com/hamzah14/hamzacode/raw/main/loop.ps1?token=AMEY276B74ZJIT7722FKVJ3AXPWDY -OutFile loop.ps1
+        Invoke-WebRequest https://github.com/hamzah14/hamzacode/raw/main/loop.ps1 -OutFile loop.ps1
         ./loop.ps1
